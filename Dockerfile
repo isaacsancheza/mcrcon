@@ -26,3 +26,6 @@ RUN git clone https://github.com/Tiiffi/mcrcon /tmp/mcrcon \
 FROM debian:trixie
 
 COPY --from=builder /usr/local/bin/mcrcon /usr/local/bin/mcrcon
+
+ENTRYPOINT ["/usr/local/bin/mcrcon"]
+
